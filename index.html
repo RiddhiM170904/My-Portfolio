@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav class="navbar">
+            <img src="images/Riddhi logo.png" class="logo" width="400" height="200">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I'm <span> Riddhi </span> Mhadgut </h1>
+        </div>
+    </div>
+</div>
+<!-- ---------------------About Section--------------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello! I'm Riddhi Mhadgut, a 2nd-year Computer Science & Engineering student at VIT Bhopal. Passionate about technology and programming, I'm on a journey to sharpen my skills and explore the vast world of computer science. Currently, I am delving into web development and aim to create meaningful and innovative solutions through coding. Also I’m passionate about programming and currently focused on learning Data Structures & Algorithms to enhance my problem-solving skills. Eager to learn, collaborate, and grow, I look forward to connecting with professionals and peers who share a passion for technology and innovation.
+                    Let’s connect and build something amazing together!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Data Structures & Algorithm</span><br>Solving Complex and real-life problems</li>
+                            <li><span>Web Development</span><br>Developing Interesting Websites</li>
+                            <li><span>UI/UX</span><br>Designing Web/App Interface</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Nov 2024</span><br>SIH Finalists</li>
+                            <li><span>Dec 2024</span><br>Contributor in GSSoC’24 Extd, Hacktoberfest & SWOC</li>
+                            <li><span>2025</span><br>LeetCode - 
+                                567,219</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Aug 2023 – Jul 2027</span><br>VIT Bhopal University , Bhopal</li>
+                            <li><span>Mar 2021 – May 2022</span><br>Vindhyachal Academy, Dewas, M.P. - Class XII</li>
+                            <li><span>Mar 2019 – Apr 2020</span><br>Vindhyachal Academy, Dewas, M.P. - Class X</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tabcontents){
+            tablink.classList.remove("active-link");
+        }
+
+    }
+</script>
+
+</body>
+</html>
