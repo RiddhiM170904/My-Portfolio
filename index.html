@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1a1f023d39.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
@@ -34,7 +35,7 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>Hello! I'm Riddhi Mhadgut, a 2nd-year Computer Science & Engineering student at VIT Bhopal. Passionate about technology and programming, I'm on a journey to sharpen my skills and explore the vast world of computer science. Currently, I am delving into web development and aim to create meaningful and innovative solutions through coding. Also I’m passionate about programming and currently focused on learning Data Structures & Algorithms to enhance my problem-solving skills. Eager to learn, collaborate, and grow, I look forward to connecting with professionals and peers who share a passion for technology and innovation.
+                <p>Hello! I'm Riddhi Mhadgut, a 3rd-year Computer Science & Engineering student at VIT Bhopal. Passionate about technology and programming, I'm on a journey to sharpen my skills and explore the vast world of computer science. Currently, I am delving into web development and aim to create meaningful and innovative solutions through coding. Also I’m passionate about programming and currently focused on learning Data Structures & Algorithms to enhance my problem-solving skills. Eager to learn, collaborate, and grow, I look forward to connecting with professionals and peers who share a passion for technology and innovation.
                     Let’s connect and build something amazing together!</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -58,7 +59,7 @@
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Aug 2023 – Jul 2027</span><br>VIT Bhopal , Bhopal</li>
+                            <li><span>Aug 2023 – Jul 2027</span><br> B.Tech Comp. Science - VIT Bhopal , Bhopal</li>
                             <li><span>Mar 2021 – May 2022</span><br>Vindhyachal Academy, Dewas, M.P. - Class XII</li>
                             <li><span>Mar 2019 – Apr 2020</span><br>Vindhyachal Academy, Dewas, M.P. - Class X</li>
                         </ul>
@@ -68,14 +69,46 @@
     </div>
 </div>
 
+<!-- -------------------Services-------------------- -->
+<div class="services">
+    <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-brands fa-linkedin"></i>
+                <h2>Linked In</h2>
+                <p>Hi! I'm Riddhi Mhadgut, a passionate Computer Science undergrad at VIT Bhopal. I'm exploring the world of AI, web development, and software engineering through hands-on projects. Always eager to learn, collaborate, and build impactful tech solutions!</p>
+                <a href="https://www.linkedin.com/in/riddhi-mhadgut-3b0a21289/">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>LeetCode</h2>
+                <p>Hi! I'm Riddhi Mhadgut, a CSE undergrad who enjoys tackling algorithmic challenges and sharpening problem-solving skills daily. I actively code on LeetCode, where I hold a global rank of 564,306. Always up for a good logic puzzle or a DSA deep dive!</p>
+                <a href="https://leetcode.com/u/Riddhi_Mhadgut/">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-square-github"></i>
+                <h2>GitHub</h2>
+                <p>Hey! I'm Riddhi Mhadgut, a curious developer who loves turning ideas into code. My GitHub is a space where I experiment, build real-world projects, and grow through open source. From web apps to AI-driven tools, it's all part of the journey!</p>
+                <a href="https://github.com/RiddhiM170904">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
     function opentab(tabname){
-        for(tablink of tabcontents){
+        for(tablink of tablinks){
             tablink.classList.remove("active-link");
         }
-
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
     }
 </script>
 
