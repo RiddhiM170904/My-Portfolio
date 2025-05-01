@@ -13,11 +13,11 @@
         <nav class="navbar">
             <img src="images/Riddhi logo.png" class="logo" width="250" height="100">
             <ul id="sidemenu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Pages</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <i class="fas fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fas fa-bars" onclick="openmenu()"></i>
@@ -72,7 +72,7 @@
 </div>
 
 <!-- -------------------Services-------------------- -->
-<div class="services">
+<div class="services" id="services">
     <div class="container">
         <h1 class="sub-title">My Pages</h1>
         <div class="services-list">
@@ -156,7 +156,7 @@
                 <a href="images/Riddhi-Resume.docx (1).pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form >
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -194,6 +194,16 @@
         sidemenu.style.right = "-200px";
     }
 </script>
-
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyPEd5H1CmaH72SS7UO_qzG0OdRsT5QCy5KWTwElwlIZe7AKutm5SuXcSDwQLm1sV4W/exec'
+    const form = document.forms['submit-to-google-sheet']
+    
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
 </body>
 </html>
