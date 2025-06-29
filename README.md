@@ -50,7 +50,7 @@ npm start
 📧 Contact
 Feel free to connect with me:
 
-📮 Email: riddhimhadgut@example.com
+📮 Email: riddhimhadgut17@gmail.com
 
 💼 LinkedIn: linkedin.com/in/riddhimhadgut
 
