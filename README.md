@@ -1,5 +1,5 @@
 🌐 Riddhi Mhadgut - Portfolio Website
-Welcome to the personal portfolio website of Riddhi Mhadgut, a Computer Science & Engineering student at VIT Bhopal. This website showcases my skills, projects, and achievements as a passionate developer, innovator, and tech enthusiast.
+Welcome to the personal portfolio website of Riddhi Mhadgut, a pre final year Computer Science & Engineering student at VIT Bhopal. This website showcases my skills, projects, and achievements as a passionate developer, innovator, and tech enthusiast.
 
 🔗 Live Website: riddhi-mhadgut-portfolio.vercel.app
 
